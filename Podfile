@@ -9,4 +9,5 @@ target 'FirebaseDemo' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
  pod 'SkyFloatingLabelTextField'
+pod 'JGProgressHUD'
 end

@@ -8,6 +8,8 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import Firebase
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
@@ -27,6 +29,17 @@ class LoginViewController: UIViewController {
     
     @IBAction func createAccountButtonClicked(_ sender: UIButton) {
         
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            
+            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+                
+                if error != nil {
+                    print(result?.user.email ?? "no email")
+                } else {
+                    print(result?.user.email ?? "no email")
+                }
+            }
+        }
         
     }
     
