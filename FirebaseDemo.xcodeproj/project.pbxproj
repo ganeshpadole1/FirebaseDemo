@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		304E1587247976000050FD8D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E1586247976000050FD8D /* LoginViewController.swift */; };
+		304E158A2479997B0050FD8D /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E15892479997B0050FD8D /* Utility.swift */; };
 		3084FB102479684800BAC711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084FB0F2479684800BAC711 /* AppDelegate.swift */; };
 		3084FB122479684800BAC711 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084FB112479684800BAC711 /* SceneDelegate.swift */; };
 		3084FB172479684800BAC711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3084FB152479684800BAC711 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		20CC900D48F83E3BBDD68749 /* Pods_FirebaseDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		304E1586247976000050FD8D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		304E15892479997B0050FD8D /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3084FB0C2479684800BAC711 /* FirebaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3084FB0F2479684800BAC711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3084FB112479684800BAC711 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				3084FB182479684B00BAC711 /* Assets.xcassets */,
 				3084FB1A2479684B00BAC711 /* LaunchScreen.storyboard */,
 				3084FB1D2479684B00BAC711 /* Info.plist */,
+				304E15892479997B0050FD8D /* Utility.swift */,
 			);
 			path = FirebaseDemo;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304E158A2479997B0050FD8D /* Utility.swift in Sources */,
 				304E1587247976000050FD8D /* LoginViewController.swift in Sources */,
 				3084FB102479684800BAC711 /* AppDelegate.swift in Sources */,
 				3084FB122479684800BAC711 /* SceneDelegate.swift in Sources */,
