@@ -13,6 +13,7 @@
 		3084FB172479684800BAC711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3084FB152479684800BAC711 /* Main.storyboard */; };
 		3084FB192479684B00BAC711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3084FB182479684B00BAC711 /* Assets.xcassets */; };
 		3084FB1C2479684B00BAC711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3084FB1A2479684B00BAC711 /* LaunchScreen.storyboard */; };
+		3084FB2424796AEB00BAC711 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3084FB2324796AEB00BAC711 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3084FB182479684B00BAC711 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3084FB1B2479684B00BAC711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3084FB1D2479684B00BAC711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3084FB2324796AEB00BAC711 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		3084FB0E2479684800BAC711 /* FirebaseDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3084FB2324796AEB00BAC711 /* GoogleService-Info.plist */,
 				3084FB0F2479684800BAC711 /* AppDelegate.swift */,
 				3084FB112479684800BAC711 /* SceneDelegate.swift */,
 				3084FB132479684800BAC711 /* ViewController.swift */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3084FB1C2479684B00BAC711 /* LaunchScreen.storyboard in Resources */,
+				3084FB2424796AEB00BAC711 /* GoogleService-Info.plist in Resources */,
 				3084FB192479684B00BAC711 /* Assets.xcassets in Resources */,
 				3084FB172479684800BAC711 /* Main.storyboard in Resources */,
 			);
