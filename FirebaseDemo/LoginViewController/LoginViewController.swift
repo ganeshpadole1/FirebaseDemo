@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         hud.textLabel.text = "Loading"
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
@@ -35,6 +36,7 @@ class LoginViewController: UIViewController {
             
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 
+                self.hud.dismiss(animated: true)
                 if error == nil { // Sign In Successful.
                     Utility.invokeAlertMethod("Success", strBody: "You have successfully Logged In.", delegate: self)
                 } else {
@@ -57,6 +59,7 @@ class LoginViewController: UIViewController {
                     Utility.invokeAlertMethod("Alert", strBody: error?.localizedDescription ?? "Error occured while creating user account. ", delegate: self)
                 } else {
                     print(result?.user.email ?? "no email")
+                    Utility.invokeAlertMethod("Success", strBody: error?.localizedDescription ?? "User Account created successfully. ", delegate: self)
                 }
             }
         }
