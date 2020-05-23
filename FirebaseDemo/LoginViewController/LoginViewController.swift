@@ -7,25 +7,37 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var emailTextField: UITextField!
-    
-    @IBOutlet weak var passwordTextField: UITextField!
-    
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
     }
     
     @IBAction func createAccountButtonClicked(_ sender: UIButton) {
+        
+        
     }
     
+}
+
+extension LoginViewController: UITextFieldDelegate {
+ 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        
+        return true
+    }
 }
