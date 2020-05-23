@@ -10,6 +10,7 @@ import UIKit
 import SkyFloatingLabelTextField
 import Firebase
 import JGProgressHUD
+import FirebaseUI
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
@@ -17,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
     let hud = JGProgressHUD(style: .dark)
+    var authUI: FUIAuth?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,25 +28,34 @@ class LoginViewController: UIViewController {
         passwordTextField.delegate = self
         hud.textLabel.text = "Loading"
         self.hideKeyboardWhenTappedAround()
+        
+        authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        let providers: [FUIAuthProvider] = [FUIGoogleAuth()]
+        authUI?.providers = providers
     }
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
         
         self.view.endEditing(true)
         
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            hud.show(in: self.view)
-            
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                
-                self.hud.dismiss(animated: true)
-                if error == nil { // Sign In Successful.
-                    Utility.invokeAlertMethod("Success", strBody: "You have successfully Logged In.", delegate: self)
-                } else {
-                    print(error?.localizedDescription)
-                }
-            }
+        if let authVC = authUI?.authViewController() {
+            present(authVC, animated: true, completion: nil)
         }
+//
+//        if let email = emailTextField.text, let password = passwordTextField.text {
+//            hud.show(in: self.view)
+//
+//            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+//
+//                self.hud.dismiss(animated: true)
+//                if error == nil { // Sign In Successful.
+//                    Utility.invokeAlertMethod("Success", strBody: "You have successfully Logged In.", delegate: self)
+//                } else {
+//                    print(error?.localizedDescription)
+//                }
+//            }
+//        }
     }
     
     @IBAction func createAccountButtonClicked(_ sender: UIButton) {
@@ -76,6 +88,14 @@ extension LoginViewController: UITextFieldDelegate {
         
         return true
     }
-    
-    
+}
+
+extension LoginViewController: FUIAuthDelegate {
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        
+        if error == nil {
+            print("Login Successful")
+            print(authDataResult?.user.email)
+        }
+    }
 }

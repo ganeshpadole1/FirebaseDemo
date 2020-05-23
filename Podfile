@@ -8,6 +8,9 @@ target 'FirebaseDemo' do
   # Pods for FirebaseDemo
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
- pod 'SkyFloatingLabelTextField'
-pod 'JGProgressHUD'
+  pod 'SkyFloatingLabelTextField'
+  pod 'JGProgressHUD'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
+ 
 end
