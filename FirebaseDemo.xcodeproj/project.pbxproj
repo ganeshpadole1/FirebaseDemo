@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304E1587247976000050FD8D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E1586247976000050FD8D /* LoginViewController.swift */; };
 		3084FB102479684800BAC711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084FB0F2479684800BAC711 /* AppDelegate.swift */; };
 		3084FB122479684800BAC711 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084FB112479684800BAC711 /* SceneDelegate.swift */; };
-		3084FB142479684800BAC711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3084FB132479684800BAC711 /* ViewController.swift */; };
 		3084FB172479684800BAC711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3084FB152479684800BAC711 /* Main.storyboard */; };
 		3084FB192479684B00BAC711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3084FB182479684B00BAC711 /* Assets.xcassets */; };
 		3084FB1C2479684B00BAC711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3084FB1A2479684B00BAC711 /* LaunchScreen.storyboard */; };
@@ -19,10 +19,10 @@
 
 /* Begin PBXFileReference section */
 		20CC900D48F83E3BBDD68749 /* Pods_FirebaseDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		304E1586247976000050FD8D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3084FB0C2479684800BAC711 /* FirebaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3084FB0F2479684800BAC711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3084FB112479684800BAC711 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3084FB132479684800BAC711 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3084FB162479684800BAC711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3084FB182479684B00BAC711 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3084FB1B2479684B00BAC711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		304E15882479760B0050FD8D /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				304E1586247976000050FD8D /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
 		3084FB032479684800BAC711 = {
 			isa = PBXGroup;
 			children = (
@@ -65,10 +73,10 @@
 		3084FB0E2479684800BAC711 /* FirebaseDemo */ = {
 			isa = PBXGroup;
 			children = (
+				304E15882479760B0050FD8D /* LoginViewController */,
 				3084FB2324796AEB00BAC711 /* GoogleService-Info.plist */,
 				3084FB0F2479684800BAC711 /* AppDelegate.swift */,
 				3084FB112479684800BAC711 /* SceneDelegate.swift */,
-				3084FB132479684800BAC711 /* ViewController.swift */,
 				3084FB152479684800BAC711 /* Main.storyboard */,
 				3084FB182479684B00BAC711 /* Assets.xcassets */,
 				3084FB1A2479684B00BAC711 /* LaunchScreen.storyboard */,
@@ -83,7 +91,6 @@
 				BEE11B004D9B4CC338780E15 /* Pods-FirebaseDemo.debug.xcconfig */,
 				FE44CE1073046EEED71F527A /* Pods-FirebaseDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,7 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3084FB142479684800BAC711 /* ViewController.swift in Sources */,
+				304E1587247976000050FD8D /* LoginViewController.swift in Sources */,
 				3084FB102479684800BAC711 /* AppDelegate.swift in Sources */,
 				3084FB122479684800BAC711 /* SceneDelegate.swift in Sources */,
 			);
